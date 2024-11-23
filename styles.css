@@ -1,0 +1,488 @@
+/* ESTILIZAÇÕES GERAIS ======================================================*/
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box; 
+   font-family: 'poppins', sans-serif;
+
+}/* seletor que reseta TODOS os elementos da página */
+
+
+body{
+    background-color: black;
+    height: 100vh;
+}
+
+.interface{
+    max-width: 1280px;
+    margin: 0 auto;
+}
+.flex {
+    display: flex;
+}
+
+.btn-contato button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: aqua;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer; /* interação do cursor  */
+    transition: .2s;
+}
+
+.btn-contato1 button {
+    padding: 10px 40px;
+    font-size: 18px;
+    font-weight: 600;
+    background-color: aqua;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer; /* interação do cursor  */
+    transition: .2s;
+}
+
+h2.titulo{
+    color: white;
+    font-size: 38px;
+    text-align: center;
+
+}
+
+h2.titulo span{
+    color: aqua;
+}
+
+button:hover, form .btn-enviar input:hover{ /* estilizaçao global */
+    box-shadow: 0px 0px 8px/* espalhamento */ rgba(0, 255, 255, 0.452);
+    transform: scale(1.05);
+}
+/* todos os buttons vao ter o mesmo efeito agora  */
+
+
+/* bloco estilo do cabeçalho ===========================*/
+header{
+    padding: 40px 4%;
+
+}
+
+header > .interface {/* procura os elementos que possuem a classe interface dentro do campo header  */
+    display: flex;
+    align-items: center;
+    justify-content: space-between; /* distancia entre um e outro  */
+} 
+
+header a {
+    color: #5c5c5c;
+    text-decoration: none; /*  tira o sublinhado  */
+    display: inline-block; /* double propriedade */
+    transform-style: .2s;
+}       
+
+header a:hover{ /* atributo para clarear ao passar o mouse  */
+    color: white;
+    transform/* só funciona para elementos block level */: scale(1.05);
+}
+
+header nav ul{
+    list-style-type: none;
+
+}
+
+
+
+header nav ul li{ /* ordenação das listas lado a lado  */
+    display: inline-block;
+    padding: 0/* cima e baixo */ 40px/* esquerda direita  */;
+
+}
+/* ============================================================================================ */
+
+/*  estilo do topo do site  */
+section.topo-do-site{
+    padding: 40px 4%;
+}
+
+section.topo-do-site .flex{
+    align-items: center;
+    justify-content: center;
+    gap: 90px; /* "respiro" entre os elementos  */
+}
+
+.topo-do-site h1{
+    color: white;
+    font-size: 42px;
+    line-height: 40px;
+}
+
+.topo-do-site h2{
+    color: white;
+    font-size: 35px;
+    line-height: 40px;
+}
+
+.topo-do-site .text-topo-site p{
+    color: white;
+    margin: 40px 0px;
+}
+
+
+.topo-do-site .img-topo-site img{
+    position: relative;
+    animation: flutuar 2s ease-in-out infinite alternate;
+    /*  tempo da animação\\ velocidade\\  tempo de execuçao\\ controle de 0-100 100-0*/
+}
+
+/* keyframes do css  */
+/* só funciona se a posição for diferente do static (padrão */
+@keyframes flutuar{
+    /* definir o estado inicial da animação*/ 0%{
+       top: 0; 
+    }
+    100%{
+        top: 30px;
+    }
+}
+
+/* ESTILO DAS ESPECIALIDADES =========================================== */
+section.especialidades{
+    padding: 40px 4%;
+}
+
+
+section.especialidades .flex{
+    gap: 60px
+}
+
+.especialidades .especialidades-box{
+    color: white;
+    padding: 40px;
+    border-radius: 20px;
+    border: 2px solid #fff;
+    margin-top: 45px;
+    transition: .2s;
+} 
+.especialidades .especialidades-box:hover{
+    transform: scale(1.05);
+    box-shadow: 0 0 8px rgba(255, 255, 255, 0.486); /* repetir */
+}
+
+
+.especialidades .especialidades-box i{
+            font-size: 400%;
+            color: aqua
+}
+
+.especialidades .especialidades-box h3{
+            font-size: 28px;
+            margin: 15px 0px;
+}
+
+
+/* ESTILO SOBRE */
+section.sobre{
+    padding: 80px 4%; /*  textos nao colam nas laterais  */
+    /* padding é o espaço descendo */
+}
+
+section.sobre .flex{
+    align-items: center;
+    gap: 60px;
+}
+
+.sobre .txt-sobre{
+    color: #fff; /* alinhar com o meio da imagem e respiro para descolar  */
+
+}
+
+.sobre .txt-sobre h2{
+    font-size: 40px;
+    line-height: 40px;
+    margin-bottom: 30px; /* distancia do titulo para o paragrafo */
+    /* converter o span para block level  */
+}
+
+.sobre .txt-sobre h2 span{
+    color: aqua;
+    display: block;
+}
+
+.sobre .txt-sobre p{
+    margin: 20px 0;
+    text-align: justify; /*  texto justificado e sem quebras */
+}
+
+.img-sobre img{
+    border-radius: 70px;
+}
+
+.btn-social button{
+    width: 60px;
+    height: 60px;  /* quadrado perfeito  */
+    border-radius: 50%;
+    border: none;
+    background-color: aqua;
+    font-size: 22px;
+    cursor: pointer;
+    margin: 0 5px;
+    transition: 2s;
+}
+
+/* estilo projetos ============================== */
+section.projetos{
+    padding: 200px 4%;
+    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.11); /* linha divisória estilizada  */
+}
+
+.btn-projetos{
+        width: 250px;
+        height: 250px;
+}
+
+section.projetos .flex{
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn-projetos button{
+    justify-content: flex-start;
+    padding: 10px 50px;
+    font-size: 30px;
+    font-weight: 600;
+    background-color: aqua;
+    border: 0;
+    border-radius: 30px;
+    cursor: pointer; /* interação do cursor  */
+    transition: .2s;
+
+    
+}
+
+/* estilo do formulário de contato  ==================================*/
+section.formulario{
+    padding: 80px 4%; /* padrao de aplicaçao do codigo  */
+}
+
+form{
+    max-width: 500px; /* limite de largura  */
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column; /* vao ficar em colunas  */
+    margin-top: 40px;
+    gap: 10px;
+    
+}
+
+form input, form textarea{   /* chama os campos de texto dentro do formulario  */
+    width: 100%;
+    background-color: rgb(54, 54, 54);
+    border: 0;
+    outline: 0; /* borda ao click (contorno) */
+    padding: 20px 15px;
+    border-radius: 15px;
+    color: #fff;
+    font-size: 18px;
+}
+
+/* form input::placeholder{   /* cor do placeholder (texto invisivel) */
+    /* color:aqua */
+/* } */
+
+form textarea {
+    resize: none; /* limita o redimensionamento  */
+    max-height: 200px;
+}
+
+form .btn-enviar{
+    margin-top: 20px; /* distância */
+    text-align: center;
+}
+
+form .btn-enviar input{   /* [type:  submit] limita o trabalho em escolher os inputs direcionando para apenas 1  */
+    width: 120px;
+    background-color: aqua;
+    color: black;
+    font-weight: 700;
+    cursor: pointer;  
+    transition: 1s;
+}
+
+/* ESTILO DO RODAPÉ ============== */
+
+footer{
+    padding: 40px 4%;
+    box-shadow: 0 0 40px 10px rgba(255, 255, 255, 0.11);
+}
+
+footer .flex{ /* tem que chamar a classe footer  para chamar o flex apemas para o footer*/
+    justify-content: space-between; /* só funciona em display flex  */
+
+}
+
+footer .line-footer{
+    padding: 20px 0;
+}
+
+.borda{
+    border-top: 2px solid aqua;
+}
+
+footer .line-footer p i{ /* icone */
+    color: aqua;
+    font-size: 22px;
+}
+
+footer .line-footer p a{
+    color: #fff;
+
+}
+
+/* projetos ===================== */
+.container {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.item {
+    display: flex;
+    align-items: center;
+    margin: 20px 0;
+    height: 500px;
+    box-shadow: 0 0 40px 10px aqua;
+}
+
+.item img {
+   padding: 80px 4%;
+    width: 600px; /* Ajuste o tamanho conforme necessário */
+    height: 300;
+    margin-right: 20px; /* Espaço entre imagem e texto */
+    border-radius: 45px;
+}
+
+
+.item.reverse {
+    flex-direction: row-reverse;
+    box-shadow: 0 0 40px 10px aqua;
+    max-width: 1000px;
+}
+
+.item p {
+   font-size: large;
+    flex: 1; /* Faz o texto ocupar o espaço restante */
+    text-align: center; /* Centraliza o texto */
+    margin: 20px; /* Remove margens padrão */
+    padding: 80px 4%; /* Espaçamento interno do texto */
+    color: white;
+    width: 50px;
+    cursor: pointer;  
+    transition: 1s;
+    margin: 0 auto;
+}
+
+@media screen and (max-width: 1035px){
+    /* classes gerais  */
+    .flex{
+        flex-direction: column;
+    }
+
+    .topo-do-site .flex{
+        flex-direction: column;
+    }
+
+    /* cabeçalho */
+    .menu-desktop, .btn-contato{
+        display: none;
+
+    }
+    /* topo do site  */
+    /* regra do media: o que você não modifica, você apaga */
+    section.topo-do-site{
+        padding: 20px 8%;
+    }
+
+    .topo-do-site h1{
+        font-size: 30px;
+    }
+
+    .topo-do-site .img-topo-site img{
+        width: 100%;
+    }
+    
+    section.topo-do-site .flex{
+        gap: 20px; 
+    }
+
+    section.especialidades{
+        padding: 40px 8%;
+    }
+    
+    h2.titulo{
+        font-size: 34px;
+        line-height: 30px;
+    }
+
+    section.sobre{
+        padding: 80px 8%; /*  textos nao colam nas laterais  */
+        /* padding é o espaço descendo */
+    }
+    .sobre .txt-sobre h2{
+        font-size: 34px;
+        line-height: 35px;
+        text-align: center;
+        /* distancia do titulo para o paragrafo */
+        /* converter o span para block level  */
+    }
+
+    .btn-social{
+        text-align: center;
+
+    }
+    .img-sobre img{
+        width: 100%;
+
+    }
+
+    .btn-projetos {
+        gap: 45px;
+        padding: 20% 1%;
+        
+    }
+
+    footer .flex{
+        flex-direction: column;
+    }
+
+    foorter .line-footer{
+        text-align: center;
+    }
+
+    /* gap -> distânciamento  */
+
+    .container {
+        width: 100%;
+
+    }
+    .item img {
+        padding: 40px 8%;
+         width: 230px; /* Ajuste o tamanho conforme necessário */
+         height: 200px;
+         margin-right: 0px; /* Espaço entre imagem e texto */
+        text-align: left;
+     }
+     .item p {
+        font-size: 72%; 
+        text-align: center; /* Centraliza o texto */
+         margin: 100px; /* Remove margens padrão */
+         padding: 100px 3%; /* Espaçamento interno do texto */
+         width: 30px;
+         margin: auto;
+         gap: 40px;
+         flex-direction: column;
+         position: static;
+     }
+
+}
+/* alt + shift + F  */
+/* se nao estiver conseguindo aplicar a responsividade pode ocorrer devido a aplicação incorreta da media */
